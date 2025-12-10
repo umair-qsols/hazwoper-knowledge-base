@@ -1,0 +1,5 @@
+venv
+run_app.bat
+.env
+*.pyc
+__pycache__
