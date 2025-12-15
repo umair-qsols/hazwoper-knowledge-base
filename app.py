@@ -9,7 +9,7 @@ load_dotenv()
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="Gemini Knowledge Base",
+    page_title="Knowledge Base",
     page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -18,9 +18,6 @@ st.set_page_config(
 # --- Custom Styling ---
 st.markdown("""
 <style>
-    .stApp {
-        background-color: #0e1117;
-    }
     .main-header {
         font-family: 'Inter', sans-serif;
         font-weight: 700;
@@ -31,11 +28,10 @@ st.markdown("""
         margin-bottom: 2rem;
     }
     .stChatMessage {
-        background-color: #1e2329;
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 1rem;
-        border: 1px solid #2b313a;
+        border: 1px solid rgba(128, 128, 128, 0.2);
     }
     .stButton>button {
         background: linear-gradient(90deg, #4285F4 0%, #9B72CB 100%);
@@ -50,12 +46,7 @@ st.markdown("""
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
     }
-    [data-testid="stSidebar"] {
-        background-color: #161b22;
-        border-right: 1px solid #2b313a;
-    }
     div[data-testid="stFileUploader"] section {
-        background-color: #1e2329;
         border: 1px dashed #4285F4;
     }
 </style>
@@ -164,7 +155,7 @@ with st.sidebar:
         st.rerun()
 
 # --- Main Interface ---
-st.markdown('<div class="main-header">Gemini Knowledge Base 🤖</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">Knowledge Base 🤖</div>', unsafe_allow_html=True)
 
 if not api_key:
     st.info("👋 Welcome! Please configure your Gemini API Key in the sidebar to get started.")
